@@ -31,6 +31,7 @@ public class InsertStockController implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
        
     }
+@FXML
     public void insertData (ActionEvent event){
         String type = txtT.getText();
         stock std =new stock();
@@ -51,6 +52,7 @@ public class InsertStockController implements Initializable{
         }
   
     }
+@FXML
     public void vider (){
         txtT.clear();
     }

@@ -110,7 +110,8 @@ while (rs2.next()){
 
 
 
-public void insertstock() throws IOException {
+     @FXML
+     public void insertstock() throws IOException {
     Stage stage =new Stage();
     Parent root =FXMLLoader.load(getClass().getResource("/bright/insertStock.fxml"));
     Scene scene =new Scene (root);
@@ -119,7 +120,8 @@ public void insertstock() throws IOException {
     stage.show();
     
 }
-public void update() throws IOException {
+     @FXML
+     public void update() throws IOException {
     Stage stage =new Stage();
     Parent root =FXMLLoader.load(getClass().getResource("/bright/modifier.fxml"));
     Scene scene =new Scene (root);
@@ -127,7 +129,8 @@ public void update() throws IOException {
     stage.setTitle("Changer ou Supprimer  un stock");
     stage.show();
 }
-public void updated() throws IOException {
+     @FXML
+     public void updated() throws IOException {
     Stage stage =new Stage();
     Parent root =FXMLLoader.load(getClass().getResource("/bright/modifierd.fxml"));
     Scene scene =new Scene (root);

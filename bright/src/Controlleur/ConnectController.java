@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -32,7 +33,7 @@ public class ConnectController implements Initializable{
           Connection con=connectionDB.getInstance().getCnx();
 
     public void loginn (ActionEvent event )throws SQLException {
-PreparedStatement stat =null;
+        PreparedStatement stat =null;
         ResultSet rs = null;
         String sql ="SELECT * FROM users WHERE name=? AND password =?";
         try{
@@ -42,8 +43,11 @@ PreparedStatement stat =null;
             rs=stat.executeQuery();
             if (rs.next()){
                 lbletat.setText("Connecté!");
+                    
+                
                 Stage stage =new Stage();
-                 Parent root = FXMLLoader.load(getClass().getResource("/bright/Home.fxml"));
+                 Parent root = FXMLLoader.load(getClass().getResource("/bright/gestionR.fxml"));
+              
                  Scene scene = new Scene(root);
                  stage.setScene(scene);
                

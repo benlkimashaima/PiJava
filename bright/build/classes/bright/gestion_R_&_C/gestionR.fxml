@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlleur.GestionRController">
+   <children>
+      <TabPane prefHeight="432.0" prefWidth="778.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Campement">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="257.0" prefWidth="689.0">
+                     <children>
+                        <TableView fx:id="table_C" layoutX="129.0" layoutY="148.0" prefHeight="200.0" prefWidth="436.0">
+                          <columns>
+                            <TableColumn fx:id="libelle" prefWidth="143.0" text="Libelle" />
+                            <TableColumn fx:id="adresse" prefWidth="190.0" text="Adresse" />
+                              <TableColumn fx:id="capacity" prefWidth="102.0" text="Capacité" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="ajouter_C" layoutX="58.0" layoutY="40.0" mnemonicParsing="false" onAction="#ajouter_C" prefHeight="32.0" prefWidth="132.0" text="Ajouter" />
+                        <Button fx:id="supprimer_C" layoutX="280.0" layoutY="40.0" mnemonicParsing="false" onAction="#supprimer_C" prefHeight="32.0" prefWidth="133.0" text="Supprimer" />
+                        <Button fx:id="modifier_C" layoutX="530.0" layoutY="40.0" mnemonicParsing="false" onAction="#modifier_C" prefHeight="32.0" prefWidth="136.0" text="Modifier (Capacité)" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Untitled Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
